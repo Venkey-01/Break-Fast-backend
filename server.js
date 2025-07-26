@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 
-// MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   ssl: true
-});
+})
+
 
 mongoose.connection.on('connected', () => {
   console.log('✅ Connected to MongoDB Atlas');
